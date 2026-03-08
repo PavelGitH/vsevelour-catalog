@@ -371,7 +371,7 @@
                     ${dotsHtml}
                     
                     <div class="card-info" onclick="openProduct('${p.id}')">
-                        <div class="price">${p.price} ₽</div>
+                        <div class="price">${p.price} ₽ • ${p.price2} USDT</div>
                         <div class="name">${p.name}</div>
                     </div>
                 `;
@@ -405,7 +405,7 @@
             modalIndex = 0;
             
             document.getElementById('m-name').innerText = p.name;
-            document.getElementById('m-price').innerText = p.price + ' ₽';
+            document.getElementById('m-price').innerText = p.price + ' ₽ • ' + p.price2 + ' USDT';
             document.getElementById('m-desc').innerText = p.description || '';
             
             const firstImg = p.images ? p.images.split(',')[0].trim() : '';
@@ -555,7 +555,7 @@
                     </svg>
                     <div class="dots-row"></div>
                     <div class="card-info" onclick="openProduct('${p.id}')">
-                        <div class="price">${p.price} ₽</div>
+                        <div class="price">${p.price} ₽ • ${p.price2} USDT</div>
                         <div class="name">${p.name}</div>
                     </div>
                 `;
