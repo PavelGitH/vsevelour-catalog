@@ -8,7 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <style>
         :root {
-            --bg: #ffffff;
+            --bg: #1c1c1e;
             --text: #ffffff;
             --hint: #8e8e93;
             --link: #007aff;
@@ -58,7 +58,7 @@
             position: sticky; 
             top: 0; 
             z-index: 100; 
-            background: #ffd1e6; 
+            background: rgba(28,28,30,0.98);
             border-bottom: 0.5px solid rgba(255,255,255,0.1);
             padding-top: calc(60px + env(safe-area-inset-top)); 
             padding-bottom: 10px;
@@ -74,7 +74,7 @@
             object-fit: cover; position: absolute; left: 15px; background: #333;
         }
 
-        .app-title { font-weight: 700; font-size: 22px; letter-spacing: -0.5px; color: #8b003f; display: flex; align-items: baseline; justify-content: center; }
+        .app-title { font-weight: 700; font-size: 22px; letter-spacing: -0.5px; color: #fff; display: flex; align-items: baseline; justify-content: center; }
         .dot-accent { color: var(--text); font-size: 22px; }
 
         /* ФИЛЬТРЫ */
@@ -172,7 +172,7 @@
         .lb-counter { position: absolute; top: 150px; left: 20px; color: white; font-weight: 600; font-size: 16px; z-index: 210;}
 
         /* --- TAB BAR --- */
-        .tab-bar { position: fixed; bottom: 0; left: 0; width: 100%; background: #ffd1e6; border-top: 0.5px solid rgba(255,255,255,0.1); display: flex; justify-content: space-around; padding-top: 10px; padding-bottom: calc(20px + env(safe-area-inset-bottom)); z-index: 80; }
+        .tab-bar { position: fixed; bottom: 0; left: 0; width: 100%; background: #1c1c1e; border-top: 0.5px solid rgba(255,255,255,0.1); display: flex; justify-content: space-around; padding-top: 10px; padding-bottom: calc(20px + env(safe-area-inset-bottom)); z-index: 80; }
         .tab-item { display: flex; flex-direction: column; align-items: center; gap: 4px; color: var(--hint); width: 50%; cursor: pointer;}
         .tab-item.active { color: #fff; }
         .tab-icon svg { width: 26px; height: 26px; fill: none; stroke: var(--hint); stroke-width: 2; transition: stroke 0.2s; }
@@ -278,8 +278,8 @@
         try { tg.requestFullscreen(); } catch (e) {}
         tg.enableClosingConfirmation(); 
 
-        tg.setHeaderColor('#ffd1e6'); 
-        tg.setBackgroundColor('#ffffff');
+        tg.setHeaderColor('#1c1c1e'); 
+        tg.setBackgroundColor('#1c1c1e');
 
         const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTn_U_81m42_Nd_RCuTLAjetVxMEfipP_fKidlslmn4U_jILFNB3ChOVQHbfp-Zxx_W8XUZJgDyplzB/pub?output=csv';
         const myNick = 'regsto'; 
