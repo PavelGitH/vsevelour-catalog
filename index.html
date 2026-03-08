@@ -74,7 +74,12 @@
             object-fit: cover; position: absolute; left: 15px; background: #333;
         }
         
-
+        .price-usdt {
+            font-size: 13px;       /* чуть меньше, чем рубли */
+            color: #d1d1d6;        /* такой же, как .name */
+            display: inline;        /* чтобы оставалось в одной строке */
+            margin-left: 4px;       /* небольшой отступ после ₽ */
+        }
         .app-title { font-weight: 700; font-size: 22px; letter-spacing: -0.5px; color: #fff; display: flex; align-items: baseline; justify-content: center; }
         .dot-accent { color: var(--text); font-size: 22px; }
 
@@ -372,7 +377,7 @@
                     ${dotsHtml}
                     
                     <div class="card-info" onclick="openProduct('${p.id}')">
-                        <div class="price">${p.price} ₽ / ${p.price2} USDT</div>
+                        <div class="price">${p.price} ₽ /<span class="price-usdt">${p.price2} USDT</span></div>
                         <div class="name">${p.name}</div>
                     </div>
                 `;
@@ -406,7 +411,7 @@
             modalIndex = 0;
             
             document.getElementById('m-name').innerText = p.name;
-            document.getElementById('m-price').innerText = p.price + ' ₽ • ' + p.price2 + ' USDT';
+            document.getElementById('m-price').innerHTML = `${p.price} ₽<span class="price-usdt">${p.price2} USDT</span>`;
             document.getElementById('m-desc').innerText = p.description || '';
             
             const firstImg = p.images ? p.images.split(',')[0].trim() : '';
@@ -556,7 +561,7 @@
                     </svg>
                     <div class="dots-row"></div>
                     <div class="card-info" onclick="openProduct('${p.id}')">
-                        <div class="price">${p.price} ₽ • ${p.price2} USDT</div>
+                        <div class="price">${p.price} ₽<span class="price-usdt">${p.price2} USDT</span></div>
                         <div class="name">${p.name}</div>
                     </div>
                 `;
